@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Teemo - El Explorador Veloz</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: url("imagenes-audio/fondot.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #fff;
+        }
+        .topbar {
+            width: 100%;
+            background: rgba(10, 10, 20, 0.85);
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            height: 64px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #bfa046;
+        }
+        .topbar .logo {
+            font-size: 1.7em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #bfa046;
+        }
+        .topbar nav {
+            margin-left: auto;
+            display: flex;
+            gap: 32px;
+        }
+        .topbar nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        .topbar nav a:hover {
+            color: #bfa046;
+        }
+        .teemo-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100vw;
+            min-height: calc(100vh - 64px);
+        }
+        .teemo-content {
+            max-width: 700px;
+            margin: 100px 0 0 80px;
+            background: rgba(10, 10, 20, 0.7);
+            padding: 40px 40px 32px 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #000a;
+            z-index: 2;
+        }
+        .teemo-title {
+            font-size: 2em;
+            color: #ffe082;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 0.2em;
+        }
+        .teemo-name {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0.5em;
+            font-style: italic;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px #000;
+        }
+        .teemo-desc {
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 2em;
+            text-shadow: 1px 1px 4px #000;
+        }
+        .teemo-cards {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 1.5em;
+        }
+        .teemo-card {
+            background: rgba(20, 20, 30, 0.85);
+            border: 2px solid #bfa046;
+            border-radius: 10px;
+            padding: 18px 32px;
+            min-width: 140px;
+            text-align: center;
+        }
+        .teemo-card-title {
+            font-size: 1em;
+            color: #bfa046;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .teemo-card-value {
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .teemo-links {
+            margin-top: 16px;
+            font-size: 0.95em;
+            color: #bfa046;
+        }
+        .teemo-links a {
+            color: #bfa046;
+            margin-right: 18px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .teemo-links a:hover {
+            color: #fff;
+        }
+        .teemo-gif-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+        }
+        .teemo-gif-container img {
+            max-width: 420px;
+            max-height: 520px;
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px #000a;
+            margin-top: 100px;
+        }
+        @media (max-width: 1200px) {
+            .teemo-content {
+                margin: 40px 10px 0 10px;
+                padding: 24px 10px;
+            }
+            .teemo-cards {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .teemo-gif-container img {
+                max-width: 260px;
+                max-height: 300px;
+                margin-top: 40px;
+            }
+        }
+        @media (max-width: 900px) {
+            .teemo-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .teemo-content {
+                margin: 40px 10px 0 10px;
+                padding: 24px 10px;
+            }
+            .teemo-gif-container {
+                margin-top: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">LEAGUE OF LEGENDS</div>
+        <nav>
+            <a href="index.html">INICIO</a>
+        </nav>
+    </div>
+    <audio id="audioFondo" src="imagenes-audio/download.mp3" loop></audio>
+    <div class="teemo-flex">
+        <div class="teemo-content">
+            <div class="teemo-title">EL EXPLORADOR VELOZ</div>
+            <div class="teemo-name">TEEMO</div>
+            <div class="teemo-desc">
+                Teemo no se inmuta ante los obstáculos más peligrosos y amenazadores mientras explora el mundo con un entusiasmo infinito y un espíritu lleno de alegría. Es un yordle con una moralidad inquebrantable que se enorgullece de seguir el código de los exploradores de Bandle, a veces con tanto ímpetu que no se percata de las consecuencias de sus acciones. Aunque algunos dicen que la existencia de los exploradores es cuestionable, algo es seguro: no hay que meterse con la convicción de Teemo.
+            </div>
+            <div class="teemo-cards">
+                <div class="teemo-card">
+                    <div class="teemo-card-title">ROL</div>
+                    <div class="teemo-card-value">TIRADOR / MAGO</div>
+                </div>
+                <div class="teemo-card">
+                    <div class="teemo-card-title">DIFICULTAD</div>
+                    <div class="teemo-card-value">MEDIA</div>
+                </div>
+            </div>
+        </div>
+        <div class="teemo-gif-container">
+            <img src="imagenes-audio/teemo.gif" alt="Teemo GIF">
+        </div>
+    </div>
+    <script>
+document.addEventListener('click', function playAudio() {
+    document.getElementById('audioFondo').play();
+    document.removeEventListener('click', playAudio);
+});
+</script>
+</body>
+</html>

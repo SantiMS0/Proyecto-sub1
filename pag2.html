@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Que es League of Legends?</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+        }
+        body {
+            min-height: 100vh;
+            background: url("imagenes-audio/fondo2.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #fff;
+            height: 100vh;
+        }
+        .topbar {
+            width: 100%;
+            background: rgba(10, 10, 20, 0.85);
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            height: 64px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #bfa046;
+        }
+        .topbar .logo {
+            font-size: 1.7em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #bfa046;
+        }
+        .topbar nav {
+            margin-left: auto;
+            display: flex;
+            gap: 32px;
+        }
+        .topbar nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        .topbar nav a:hover {
+            color: #bfa046;
+        }
+        .contenido-flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100vw;
+            height: calc(100vh - 64px);
+            overflow: hidden;
+        }
+        .cuadro-texto {
+            width: 50vw;
+            min-width: 420px;
+            max-width: 800px;
+            height: 90vh;
+            max-height: calc(100vh - 80px);
+            padding: 48px 48px 48px 48px;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 1.18em;
+            background: linear-gradient(
+                to bottom,
+                rgba(40,40,40,0.92) 0%,
+                rgba(40,40,40,0.82) 60%,
+                rgba(40,40,40,0.0) 100%
+            );
+            border-radius: 0 40px 40px 0;
+            box-shadow: 8px 0 32px #0008;
+            overflow-y: auto;
+            scrollbar-width: none; 
+        }
+        .cuadro-texto::-webkit-scrollbar {
+            width: 0 !important; 
+            background: transparent;
+        }
+        .cuadro-texto {
+            cursor: grab;
+        }
+        .cuadro-texto:active {
+            cursor: grabbing;
+        }
+        .cuadro-texto h2 {
+            margin-top: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .cuadro-texto h3 {
+            font-size: 1.4em;
+            margin-top: 1.5em;
+            font-weight: bold;
+        }
+        .cuadro-texto strong, .cuadro-texto b {
+            font-weight: bold;
+        }
+        .cuadro-texto em, .cuadro-texto i {
+            font-style: italic;
+        }
+        .cuadro-texto ul, .cuadro-texto ol {
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+        .cuadro-texto li {
+            margin-bottom: 0.7em;
+        }
+        .gif-lol {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .gif-lol img {
+            max-height: 80vh;
+            max-width: 90%;
+            width: auto;
+            border-radius: 32px;
+            box-shadow: 0 8px 32px #000a;
+            display: block;
+        }
+        @media (max-width: 1200px) {
+            .cuadro-texto {
+                width: 60vw;
+                min-width: 300px;
+                padding: 24px 16px 24px 16px;
+            }
+            .gif-lol img {
+                max-width: 95vw;
+                max-height: 50vh;
+            }
+        }
+        @media (max-width: 900px) {
+            .contenido-flex {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+            .cuadro-texto {
+                width: 95vw;
+                min-width: unset;
+                max-width: 98vw;
+                border-radius: 24px;
+                height: auto;
+                max-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">LEAGUE OF LEGENDS</div>
+        <nav>
+            <a href="index.html">INICIO</a>
+        </nav>
+    </div>
+    <div class="contenido-flex">
+        <div class="cuadro-texto" id="cuadroTexto">
+            <h2>¿Qué es League of Legends?</h2>
+            <p>
+                League of Legends es un juego competitivo que enfrenta a dos equipos de cinco jugadores cada uno en una arena virtual. El objetivo principal del juego es <strong>destruir el nexo</strong> del equipo enemigo, una estructura ubicada en el centro de su base, protegida por torretas defensivas y otros mecanismos. Para lograr esto, los equipos deben colaborar, planificar estrategias, tomar decisiones tácticas en tiempo real y ejecutar sus habilidades de forma precisa.
+            </p>
+            <p>
+                Cada jugador asume el rol de un <strong>campeón</strong>, un personaje con habilidades únicas, historia propia y un estilo de juego característico. Actualmente existen más de 160 campeones, y cada uno se adapta mejor a determinados roles dentro del equipo.
+            </p>
+            <h3>¿Cómo se juega?</h3>
+            <p>
+                El modo de juego más popular de <em>LoL</em> es la partida estándar de 5 contra 5, que se desarrolla en un mapa llamado <strong>La Grieta del Invocador</strong> (<em>Summoner's Rift</em>). Este mapa está dividido en tres carriles o líneas (top, mid y bot), una jungla que conecta esos carriles, y dos bases ubicadas en esquinas opuestas del mapa. A lo largo del mapa hay torretas, inhibidores y criaturas neutrales.
+            </p>
+            <h3>Roles principales:</h3>
+            <ol>
+                <li>
+                    <strong>Top (Superior):</strong> Se ubica en la línea superior. Generalmente, los campeones de top son resistentes o tienen buen uno contra uno.
+                </li>
+                <li>
+                    <strong>Jungla:</strong> No está en una línea específica, se mueve entre los carriles y el bosque (jungla), derrotando monstruos neutrales y ayudando a sus compañeros con emboscadas.
+                </li>
+                <li>
+                    <strong>Mid (Central):</strong> Ubicado en la línea del medio. Aquí suelen estar campeones de gran daño mágico o movilidad.
+                </li>
+                <li>
+                    <strong>ADC (Tirador):</strong> Se encuentra en la línea inferior y es el principal causante de daño físico a distancia.
+                </li>
+                <li>
+                    <strong>Support (Soporte):</strong> Acompaña al ADC en la línea inferior, proporcionando utilidad, curación, visión del mapa o control de enemigos.
+                </li>
+            </ol>
+            <h3>Elementos del juego:</h3>
+            <ul>
+                <li>
+                    <strong>Habilidades y nivel:</strong> Cada campeón tiene cuatro habilidades principales (una pasiva y tres activas), además de una habilidad definitiva (la más poderosa). Durante la partida, los campeones suben de nivel y mejoran sus habilidades.
+                </li>
+                <li>
+                    <strong>Objetos:</strong> Los jugadores ganan oro al eliminar enemigos, minions o estructuras, y lo usan para comprar objetos que mejoran estadísticas como daño, resistencia, velocidad de ataque, entre otras.
+                </li>
+                <li>
+                    <strong>Objetivos del mapa:</strong> Además de destruir el nexo enemigo, hay otros objetivos estratégicos como los dragones elementales, el Barón Nashor (una criatura poderosa que otorga ventajas temporales), y torretas que deben ser destruidas para avanzar.
+                </li>
+            </ul>
+            <h3>¿En qué consiste la experiencia de juego?</h3>
+            <p>
+                League of Legends combina acción, estrategia, trabajo en equipo y reflejos rápidos. Cada partida puede durar entre 20 y 50 minutos, y no hay dos juegos iguales debido a la enorme cantidad de variables: combinación de campeones, decisiones tácticas, estilo de juego de los oponentes, entre otros factores.
+            </p>
+        </div>
+        <div class="gif-lol">
+            <img src="imagenes-audio/r.gif" height="500px width="auto>
+        </div>
+    </div>
+</body>
+</html>
